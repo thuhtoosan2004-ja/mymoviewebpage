@@ -1,6 +1,6 @@
 {
-    "name": "movie_web",
-    "short_name": "movie_web",
+    "name": "MovieZone",
+    "short_name": "MovieZone",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

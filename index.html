@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-<!--   <base href="/"> -->
+<!--  <base href="/">-->
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -29,38 +29,54 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>movie_web</title>
+  <title>Movie Zone</title>
   <link rel="manifest" href="manifest.json">
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics.js"></script>
 </head>
 <body>
 <script>
-  function enterFullScreen() {
-  var videoElement = document.querySelector('video'); // Adjust selector to your video element
-  if (videoElement.requestFullscreen) {
-      videoElement.requestFullscreen();
-  } else if (videoElement.mozRequestFullScreen) { // Firefox
-      videoElement.mozRequestFullScreen();
-  } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-      videoElement.webkitRequestFullscreen();
-  } else if (videoElement.msRequestFullscreen) { // IE/Edge
-      videoElement.msRequestFullscreen();
-  }
+
+  const firebaseConfig = {
+     apiKey: 'AIzaSyC2pWHIuQWpw4Wo4hHq-HDd5RRai5oQJyE',
+    appId: '1:1085423372646:web:ea80834eca07d06796a0a7',
+    messagingSenderId: '1085423372646',
+    projectId: 'moviezone-10501',
+    authDomain: 'moviezone-10501.firebaseapp.com',
+    storageBucket: 'moviezone-10501.firebasestorage.app',
+    measurementId: 'G-LJ29VVCBXD',
+   };
+
+   // Initialize Firebase
+   const app = firebase.initializeApp(firebaseConfig);
+   const analytics = firebase.analytics(app);
+ function enterFullScreen() {
+ var videoElement = document.querySelector('video'); // Adjust selector to your video element
+ if (videoElement.requestFullscreen) {
+     videoElement.requestFullscreen();
+ } else if (videoElement.mozRequestFullScreen) { // Firefox
+     videoElement.mozRequestFullScreen();
+ } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+     videoElement.webkitRequestFullscreen();
+ } else if (videoElement.msRequestFullscreen) { // IE/Edge
+     videoElement.msRequestFullscreen();
+ }
 }
 
 
 
 
 
-  function exitFullScreen() {
-  if (document.exitFullscreen) {
-      document.exitFullscreen();
-  } else if (document.mozCancelFullScreen) { // Firefox
-      document.mozCancelFullScreen();
-  } else if (document.webkitExitFullscreen) { // Chrome, Safari, and Opera
-      document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) { // IE/Edge
-      document.msExitFullscreen();
-  }
+ function exitFullScreen() {
+ if (document.exitFullscreen) {
+     document.exitFullscreen();
+ } else if (document.mozCancelFullScreen) { // Firefox
+     document.mozCancelFullScreen();
+ } else if (document.webkitExitFullscreen) { // Chrome, Safari, and Opera
+     document.webkitExitFullscreen();
+ } else if (document.msExitFullscreen) { // IE/Edge
+     document.msExitFullscreen();
+ }
 }
 </script>
   <script src="flutter_bootstrap.js" async></script>
