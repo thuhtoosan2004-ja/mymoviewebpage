@@ -3,7 +3,7 @@
     "short_name": "MovieZone",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
+    "background_color": "#444954",
     "theme_color": "#0175C2",
     "description": "မြန်မာစာတန်းထိုးဇာတ်ကားကောင်းများကိုအခမဲ့ကြည့်နိုင်ပြီး။",
     "orientation": "portrait-primary",
